@@ -3,13 +3,24 @@
   <head>
     <title>MessageMeApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
+    <div class="ui container">
+
     <%= yield %>
+  </div>
+
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
 </html>
